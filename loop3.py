@@ -1,4 +1,4 @@
- # in this ;oop we are going read the manes all charascter 
+ # in this loop we are going read the manes all charascter 
 name=input("Enter your name :")
 j=1
 for i in name :
