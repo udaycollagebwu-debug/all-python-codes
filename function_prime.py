@@ -6,8 +6,8 @@ def primeNumber(n):
             return False
     return True
 num=int(input("Enter the nuber that you want to check the prime number :"))
-primeNumber(num)
-if(primeNumber(num)== False):
+result=primeNumber(num)
+if result== False:
     print("The number is not a Prime Number .")
 else:
-    print("The number is a prime number .")
+    print("The number is a Prime number .")
