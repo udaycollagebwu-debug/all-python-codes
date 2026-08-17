@@ -1,0 +1,3 @@
+import helloi
+
+helloi.hello()
