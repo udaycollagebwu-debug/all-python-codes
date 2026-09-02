@@ -30,9 +30,3 @@ if __name__ == "__main__":
 
     payment.payment(account, customer)
 
-    # This app uses all the created files in the banking folder:
-    # - input_from_user.py
-    # - customer_details.py
-    # - bank_details.py
-    # - bank_balance.py
-    # - pament_method.py
