@@ -1,37 +1,12 @@
-import customer_details as cd
+import input_from_user as iu
 import pament_method as pm
-import bank_details as bd
-import bank_balance as bb
 
 
 if __name__ == "__main__":
-    customer = cd.Customer_details(
-        name="Uday",
-        age=22,
-        address="Ahmedabad",
-        phone_number="9876543210",
-        account_number="123456789",
-        bank_name="State Bank of India",
-        acount_type="Savings"
-    )
-
-    bank = bd.bank_details(
-        bank_name="State Bank of India",
-        bank_type="Public Sector",
-        bank_address="Ahmedabad, Gujarat",
-        bank_phone_number="1800-123-456"
-    )
-
-    account = bb.bank_balance(balance=1500)
-    while True:
-        try:
-            amount = float(input("Enter the initial account balance: "))
-            if amount < 0:
-                raise ValueError("Initial balance cannot be negative.")
-            account = bb.bank_balance(balance=amount)
-            break
-        except ValueError as e:
-            print("Invalid input:", e)
+    user = iu.user_input()
+    customer = user.customer
+    bank = user.bank
+    account = user.account
 
     print("===== Customer Details =====")
     customer.display_customer_details()
@@ -54,3 +29,10 @@ if __name__ == "__main__":
         exit()
 
     payment.payment(account, customer)
+
+    # This app uses all the created files in the banking folder:
+    # - input_from_user.py
+    # - customer_details.py
+    # - bank_details.py
+    # - bank_balance.py
+    # - pament_method.py
